@@ -18,6 +18,7 @@ extension UIImageView {
                 if let loadedImage = UIImage(data: imageData) {
                     DispatchQueue.main.async {
                         self?.image = loadedImage
+                        
                     }
                 }
             }
