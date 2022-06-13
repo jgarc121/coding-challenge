@@ -16,6 +16,13 @@
 		E2AFD31F28469926007C29F5 /* fetch_rewards_coding_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AFD31E28469926007C29F5 /* fetch_rewards_coding_challengeTests.swift */; };
 		E2AFD32928469926007C29F5 /* fetch_rewards_coding_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AFD32828469926007C29F5 /* fetch_rewards_coding_challengeUITests.swift */; };
 		E2AFD32B28469926007C29F5 /* fetch_rewards_coding_challengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AFD32A28469926007C29F5 /* fetch_rewards_coding_challengeUITestsLaunchTests.swift */; };
+		E2AFD3392846DEA1007C29F5 /* MealCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AFD3382846DEA1007C29F5 /* MealCategoryResponse.swift */; };
+		E2AFD33C2846E519007C29F5 /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AFD33A2846E518007C29F5 /* MealCell.swift */; };
+		E2AFD33D2846E519007C29F5 /* MealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2AFD33B2846E518007C29F5 /* MealCell.xib */; };
+		E2AFD33F2846EEFA007C29F5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AFD33E2846EEFA007C29F5 /* NetworkService.swift */; };
+		E2AFD34928496B1B007C29F5 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AFD34828496B1B007C29F5 /* DescriptionViewController.swift */; };
+		E2AFD34D2849701F007C29F5 /* MealDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AFD34C2849701F007C29F5 /* MealDetailsResponse.swift */; };
+		E2E982EE284B12E20063F422 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E982ED284B12E20063F422 /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		E2AFD32428469926007C29F5 /* fetch-rewards-coding-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fetch-rewards-coding-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2AFD32828469926007C29F5 /* fetch_rewards_coding_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetch_rewards_coding_challengeUITests.swift; sourceTree = "<group>"; };
 		E2AFD32A28469926007C29F5 /* fetch_rewards_coding_challengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetch_rewards_coding_challengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E2AFD3382846DEA1007C29F5 /* MealCategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryResponse.swift; sourceTree = "<group>"; };
+		E2AFD33A2846E518007C29F5 /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
+		E2AFD33B2846E518007C29F5 /* MealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCell.xib; sourceTree = "<group>"; };
+		E2AFD33E2846EEFA007C29F5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E2AFD34828496B1B007C29F5 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		E2AFD34C2849701F007C29F5 /* MealDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsResponse.swift; sourceTree = "<group>"; };
+		E2E982ED284B12E20063F422 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +113,16 @@
 		E2AFD30628469924007C29F5 /* fetch-rewards-coding-challenge */ = {
 			isa = PBXGroup;
 			children = (
-				E2AFD30728469924007C29F5 /* AppDelegate.swift */,
-				E2AFD30928469924007C29F5 /* SceneDelegate.swift */,
-				E2AFD30B28469924007C29F5 /* ViewController.swift */,
-				E2AFD30D28469924007C29F5 /* Main.storyboard */,
-				E2AFD31028469926007C29F5 /* Assets.xcassets */,
-				E2AFD31228469926007C29F5 /* LaunchScreen.storyboard */,
 				E2AFD31528469926007C29F5 /* Info.plist */,
+				E2AFD34828496B1B007C29F5 /* DescriptionViewController.swift */,
+				E2AFD33A2846E518007C29F5 /* MealCell.swift */,
+				E2AFD30B28469924007C29F5 /* ViewController.swift */,
+				E2AFD31028469926007C29F5 /* Assets.xcassets */,
+				E2AFD33B2846E518007C29F5 /* MealCell.xib */,
+				E2AFD34F28497072007C29F5 /* Configuration */,
+				E2E982EF284B134C0063F422 /* Extensions */,
+				E2AFD3372846DE77007C29F5 /* Networking */,
+				E2AFD3502849708E007C29F5 /* Storyboards */,
 			);
 			path = "fetch-rewards-coding-challenge";
 			sourceTree = "<group>";
@@ -125,6 +142,42 @@
 				E2AFD32A28469926007C29F5 /* fetch_rewards_coding_challengeUITestsLaunchTests.swift */,
 			);
 			path = "fetch-rewards-coding-challengeUITests";
+			sourceTree = "<group>";
+		};
+		E2AFD3372846DE77007C29F5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E2AFD3382846DEA1007C29F5 /* MealCategoryResponse.swift */,
+				E2AFD34C2849701F007C29F5 /* MealDetailsResponse.swift */,
+				E2AFD33E2846EEFA007C29F5 /* NetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E2AFD34F28497072007C29F5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E2AFD30728469924007C29F5 /* AppDelegate.swift */,
+				E2AFD30928469924007C29F5 /* SceneDelegate.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		E2AFD3502849708E007C29F5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E2AFD31228469926007C29F5 /* LaunchScreen.storyboard */,
+				E2AFD30D28469924007C29F5 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E2E982EF284B134C0063F422 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E2E982ED284B12E20063F422 /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2AFD33D2846E519007C29F5 /* MealCell.xib in Resources */,
 				E2AFD31428469926007C29F5 /* LaunchScreen.storyboard in Resources */,
 				E2AFD31128469926007C29F5 /* Assets.xcassets in Resources */,
 				E2AFD30F28469924007C29F5 /* Main.storyboard in Resources */,
@@ -258,8 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2AFD34D2849701F007C29F5 /* MealDetailsResponse.swift in Sources */,
+				E2AFD33C2846E519007C29F5 /* MealCell.swift in Sources */,
+				E2AFD34928496B1B007C29F5 /* DescriptionViewController.swift in Sources */,
+				E2E982EE284B12E20063F422 /* UIImageView+Extensions.swift in Sources */,
 				E2AFD30C28469924007C29F5 /* ViewController.swift in Sources */,
+				E2AFD3392846DEA1007C29F5 /* MealCategoryResponse.swift in Sources */,
 				E2AFD30828469924007C29F5 /* AppDelegate.swift in Sources */,
+				E2AFD33F2846EEFA007C29F5 /* NetworkService.swift in Sources */,
 				E2AFD30A28469924007C29F5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +507,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +536,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
