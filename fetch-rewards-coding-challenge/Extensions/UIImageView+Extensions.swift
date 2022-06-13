@@ -19,6 +19,7 @@ extension UIImageView {
                     DispatchQueue.main.async {
                         self?.image = loadedImage
                         
+                        
                     }
                 }
             }
