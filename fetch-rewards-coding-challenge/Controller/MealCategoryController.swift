@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MealCategoryController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var tableView: UITableView!
     var mealResponseData: MealCategoryResponse?
     var mealImages: UIImageView?
@@ -27,10 +27,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return UITableViewCell()
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MealCell", for: indexPath) as! MealCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.mealCell, for: indexPath) as! MealCell
         
         
-        cell.setupMealCell(meal: (mealResponseData.meals[indexPath.row]), image:nil)
+        cell.setupMealCell(meal: (mealResponseData.meals[indexPath.row]))
         cell.thumbnail.loadFrom(URLAddress: mealResponseData.meals[indexPath.row].strMealThumb ?? "")
     
         return cell
@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MealCell
         
-        guard let cellId = cell.getId() else{
+        guard let cellId = cell.getId() else {
             return
         }
         
@@ -51,9 +51,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 // MARK: - Private
     private func presentDescriptionViewController(mealID: String) {
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainStoryboard = UIStoryboard(name: Constants.main, bundle: nil)
         
-        let modal = mainStoryboard.instantiateViewController(withIdentifier: "DescriptionViewController") as! DescriptionViewController
+        let modal = mainStoryboard.instantiateViewController(withIdentifier: Constants.descriptionVC) as! MealDescriptionController
         modal.mealID = mealID
         modal.modalPresentationStyle = UIModalPresentationStyle.pageSheet
         self.present(modal, animated: true, completion: nil)
@@ -65,12 +65,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     private func registerCells() {
-        let mealCell = UINib(nibName: "MealCell", bundle: nil)
-        self.tableView.register(mealCell, forCellReuseIdentifier: "MealCell")
+        let mealCell = UINib(nibName: Constants.mealCell, bundle: nil)
+        self.tableView.register(mealCell, forCellReuseIdentifier: Constants.mealCell)
     }
       
     private func fetchData() {
-        let url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert"
+        let url = Constants.desertURL
         
         networkService.fetchMealCategory(with: url) { [weak self] (result) in
             

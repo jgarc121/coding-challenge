@@ -22,10 +22,15 @@ class MealCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setupMealCell(meal: Meal, image: UIImageView?) {
+    func setupMealCell(meal: Meal) {
+        // TODO: Need default image if thumbnail is nil
+        guard let thumbnail = meal.strMealThumb else {
+            return
+        }
         self.id.text = meal.idMeal
         self.name.text = meal.strMeal
         self.id.text = meal.idMeal
+        self.thumbnail.loadFrom(URLAddress: thumbnail)
     }
     
     func getId() -> String? {
