@@ -9,4 +9,4 @@ It displays the following concepts:
 - Auto Layout
 - Handling API data
 - Image Loading
-- MVC
+- MVVM
